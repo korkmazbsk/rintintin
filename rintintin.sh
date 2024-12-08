@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # AWS bölgelerini belirtin
-REGIONS=("us-east-1" "eu-west-1" "ap-southeast-1")  # Kendi bölgelerinizi buraya ekleyin
+REGIONS=("us-east-1" "us-east-2" "ap-northeast-1" "eu-central-1" "eu-west-1" "eu-north-1" "us-west-2" "us-west-1" "eu-west-2" "eu-west-3")  # Kendi bölgelerinizi buraya ekleyin
 
 # GitHub URL
 GITHUB_REPO="https://github.com/korkmazbsk/monsta.git"
@@ -45,7 +45,7 @@ for REGION in "${REGIONS[@]}"; do
         echo "Connected to $INSTANCE_ID in $REGION"
 
         # GitHub reposunu klonla
-        git clone $GITHUB_REPO /root/monsta
+        git clone $GITHUB_REPO /root
 
         # Klasöre gir ve izinleri ayarla
         cd /root/monsta
